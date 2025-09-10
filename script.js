@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Verificar si la agrupación está completa
-        if (creditosAprobados >= creditosRequeridos) {
+        if (creditosAprobados > creditosRequeridos) {
             agrupacion.classList.add('completed');
             
             // Marcar materias adicionales como extra
@@ -68,6 +68,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 lastClickedtoggle.classList.add('extra');
                 creditosAcumulados += parseInt(lastClickedtoggle.querySelector('.materia-creditos').textContent);
             }
+            materias.forEach(materia => {
+                if(!materia.classList.contains('aprobada'))
+                {
+                    materia.classList.remove('extra');
+                }
+            });
         } else {
             agrupacion.classList.remove('completed');
             materias.forEach(materia => materia.classList.remove('extra'));
