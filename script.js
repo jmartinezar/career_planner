@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Marcar materias adicionales como extra
             let creditosAcumulados = 0;
             
-            if(creditosAprobados - parseInt(lastClickedtoggle.querySelector('.materia-creditos').textContent) > creditosRequeridos)
+            if(creditosAprobados - parseInt(lastClickedtoggle.querySelector('.materia-creditos').textContent) >= creditosRequeridos)
             {
                 lastClickedtoggle.classList.add('extra');
                 creditosAcumulados += parseInt(lastClickedtoggle.querySelector('.materia-creditos').textContent);
@@ -81,7 +81,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const progressPercent = activeTab.querySelector('.progress-title span:last-child');
         const progressFill = activeTab.querySelector('.progress-fill');
         
-        let totalCreditos = parseInt(activeTab.textContent.match(/\d+/)[0]);
+        let totalCreditos = 0;
+        if(activeTab.id === 'fundamentacion')
+        {
+            totalCreditos = 20;
+        }
+        else
+        {
+            totalCreditos = 124;
+        }
         let creditosAprobados = 0;
         
         // Calcular créditos totales y aprobados
@@ -94,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        const porcentaje = totalCreditos;// Math.round((creditosAprobados / totalCreditos) * 100);
+        const porcentaje = ((creditosAprobados / totalCreditos) * 100).toFixed(2);
         
         // Actualizar UI
         if (activeTab.id === 'fundamentacion') {
@@ -120,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.materia').forEach(materia => {
             state[materia.dataset.id] = materia.classList.contains('aprobada');
         });
-        
+
         localStorage.setItem('materiasState', JSON.stringify(state));
     }
     
