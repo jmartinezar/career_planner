@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Configurar botones de aprobación
-    //let lastClickedtoggle = null;
+    let lastClickedtoggle = null;
     const toggleButtons = document.querySelectorAll('.toggle-btn');
     toggleButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 materia.classList.add('aprobada');
                 this.textContent = 'Aprobada';
             }
+
+            lastClickedtoggle = materia;
             
             // Actualizar estado de la agrupación y progreso
             updateAgrupacionState(materia.closest('.tree').querySelector('.agrupacion'));
@@ -60,18 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Marcar materias adicionales como extra
             let creditosAcumulados = 0;
-            materias.forEach(materia => {
-                if (materia.classList.contains('aprobada')) {
-                    const creditos = parseInt(materia.querySelector('.materia-creditos').textContent);
-                    creditosAcumulados += creditos;
-                    
-                    if (creditosAcumulados > creditosRequeridos) {
-                        materia.classList.add('extra');
-                    } else {
-                        materia.classList.remove('extra');
-                    }
-                }
-            });
+            
+            if(creditosAprobados - parseInt(lastClickedtoggle.querySelector('.materia-creditos').textContent) > creditosRequeridos)
+            {
+                lastClickedtoggle.classList.add('extra');
+                creditosAcumulados += parseInt(lastClickedtoggle.querySelector('.materia-creditos').textContent);
+            }
         } else {
             agrupacion.classList.remove('completed');
             materias.forEach(materia => materia.classList.remove('extra'));
@@ -85,21 +81,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const progressPercent = activeTab.querySelector('.progress-title span:last-child');
         const progressFill = activeTab.querySelector('.progress-fill');
         
-        let totalCreditos = 0;
+        let totalCreditos = parseInt(activeTab.textContent.match(/\d+/)[0]);
         let creditosAprobados = 0;
         
         // Calcular créditos totales y aprobados
         const materias = activeTab.querySelectorAll('.materia');
         materias.forEach(materia => {
             const creditos = parseInt(materia.querySelector('.materia-creditos').textContent);
-            totalCreditos += creditos;
             
             if (materia.classList.contains('aprobada')) {
                 creditosAprobados += creditos;
             }
         });
         
-        const porcentaje = Math.round((creditosAprobados / totalCreditos) * 100);
+        const porcentaje = totalCreditos;// Math.round((creditosAprobados / totalCreditos) * 100);
         
         // Actualizar UI
         if (activeTab.id === 'fundamentacion') {
