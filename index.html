@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Estudios - Arquitectura UNAL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Plan de Estudios de Arquitectura</h1>
+        <p class="subtitle">Universidad Nacional de Colombia - Sede Bogotá</p>
+    </header>
+
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" data-tab="fundamentacion">Fundamentación</div>
+            <div class="tab" data-tab="disciplinar">Disciplinar</div>
+        </div>
+        
+        <div id="fundamentacion" class="tab-content active">
+            <div class="progress-container">
+                <div class="progress-title">
+                    <span>Progreso de Fundamentación: 0/20 créditos</span>
+                    <span>0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <div class="tree">
+                <!-- Agrupación: REPRESENTACIÓN -->
+                <div class="agrupacion" data-agrupacion="representacion">
+                    REPRESENTACIÓN (3 créditos)
+                </div>
+                <ul>
+                    <li>
+                        <div class="materia" data-id="rep1">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017220</div>
+                                Representación I
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- Agrupación: HISTORIA Y TEORÍA -->
+                <div class="agrupacion" data-agrupacion="historia">
+                    HISTORIA Y TEORÍA (4 créditos)
+                </div>
+                <ul>
+                    <li>
+                        <div class="materia" data-id="hist1">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017188</div>
+                                Historia de la arquitectura I
+                            </div>
+                            <div class="materia-creditos">2</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="teo1">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017240</div>
+                                Teoría de la arquitectura I
+                            </div>
+                            <div class="materia-creditos">2</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- Agrupación: CIUDAD Y TERRITORIO -->
+                <div class="agrupacion" data-agrupacion="ciudad">
+                    CIUDAD Y TERRITORIO (2 créditos)
+                </div>
+                <ul>
+                    <li>
+                        <div class="materia" data-id="ciudad1">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017208</div>
+                                La Ciudad y el Espacio Urbano
+                            </div>
+                            <div class="materia-creditos">2</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- Agrupación: TECNOLOGÍA -->
+                <div class="agrupacion" data-agrupacion="tecnologia">
+                    TECNOLOGÍA (5 créditos)
+                </div>
+                <ul>
+                    <li>
+                        <div class="materia" data-id="tec1">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017154</div>
+                                Fundamentos tecnológicos en arquitectura
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="tec2">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017162</div>
+                                Administración y gestión
+                            </div>
+                            <div class="materia-creditos">2</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- Agrupación: FUNDAMENTO EN EL CONTEXTO DE LAS ARTES -->
+                <div class="agrupacion" data-agrupacion="artes">
+                    FUNDAMENTO EN EL CONTEXTO DE LAS ARTES (6 créditos optativos)
+                </div>
+                <ul>
+                    <li>
+                        <div class="materia" data-id="arte1">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2016073</div>
+                                Veterrosa - Una mirada a la historia de las artes
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="arte2">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2016085</div>
+                                Responsabilidad socio-ambiental de las artes
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="arte3">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2016082</div>
+                                Problemas contemporáneos de las artes
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="arte4">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2016072</div>
+                                Gestión cultural y empresarial en las Artes
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="disciplinar" class="tab-content">
+            <div class="progress-container">
+                <div class="progress-title">
+                    <span>Progreso de Formación Disciplinar: 0/124 créditos</span>
+                    <span>0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <div class="tree">
+                <!-- Agrupación: REPRESENTACIÓN -->
+                <div class="agrupacion" data-agrupacion="rep-disciplinar">
+                    REPRESENTACIÓN (10 créditos: 7 obligatorios, 3 optativos)
+                </div>
+                <ul>
+                    <li>
+                        <div class="materia" data-id="rep2">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017221</div>
+                                Representación II
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="rep3">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017222</div>
+                                Representación III
+                            </div>
+                            <div class="materia-creditos">2</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="rep4">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017223</div>
+                                Representación IV
+                            </div>
+                            <div class="materia-creditos">2</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- Agrupación: HISTORIA Y TEORÍA DE LA ARQUITECTURA -->
+                <div class="agrupacion" data-agrupacion="historia-disciplinar">
+                    HISTORIA Y TEORÍA DE LA ARQUITECTURA (17 créditos: 15 obligatorios, 2 optativos)
+                </div>
+                <ul>
+                    <li>
+                        <div class="materia" data-id="hist2">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017199</div>
+                                Historia de la arquitectura II
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="hist3">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017200</div>
+                                Historia de la arquitectura III
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="hist4">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017201</div>
+                                Historia de la arquitectura IV
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="teo2">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017241</div>
+                                Teoría de la arquitectura II
+                            </div>
+                            <div class="materia-creditos">2</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="teo3">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017242</div>
+                                Teoría de la arquitectura III
+                            </div>
+                            <div class="materia-creditos">2</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="teo4">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017243</div>
+                                Teoría de la arquitectura IV
+                            </div>
+                            <div class="materia-creditos">2</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- Agrupación: TECNOLOGÍA -->
+                <div class="agrupacion" data-agrupacion="tec-disciplinar">
+                    TECNOLOGÍA (24 créditos: 21 obligatorios, 3 optativos)
+                </div>
+                <ul>
+                    <li>
+                        <div class="materia" data-id="sist-port">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017236</div>
+                                Sistemas Portantes Arquitectónicos
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="const-baja">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017173</div>
+                                Construcción de Baja Complejidad
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="const-mediana">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017176</div>
+                                Construcciones de Mediana Complejidad
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="const-complejas">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017175</div>
+                                Construcciones Complejas
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="est-baja">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017192</div>
+                                Estructuras de baja complejidad
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="est-mediana">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017193</div>
+                                Estructuras de Mediana Complejidad
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="est-alta">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2023223</div>
+                                Estructuras de Alta Complejidad
+                            </div>
+                            <div class="materia-creditos">3</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- Agrupación: PROYECTO -->
+                <div class="agrupacion" data-agrupacion="proyecto">
+                    PROYECTO (53 créditos: 15 obligatorios, 38 optativos)
+                </div>
+                <ul>
+                    <li>
+                        <div class="materia" data-id="proy1">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017212</div>
+                                Proyecto I
+                            </div>
+                            <div class="materia-creditos">5</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="proy2">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017213</div>
+                                Proyecto II
+                            </div>
+                            <div class="materia-creditos">5</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="materia" data-id="proy3">
+                            <div class="materia-info">
+                                <div class="materia-codigo">2017214</div>
+                                Proyecto III
+                            </div>
+                            <div class="materia-creditos">5</div>
+                            <button class="toggle-btn">No Aprobada</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Plan de Estudios de Arquitectura - Universidad Nacional de Colombia</p>
+        <p>Basado en los Acuerdos 076 de 2015, 136 de 2017 y 3 de 2022</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
